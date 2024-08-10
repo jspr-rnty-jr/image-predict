@@ -5,18 +5,19 @@
     <title>Image-Predict</title>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Snake's ID</h1>
-        <input type="file">
-        <div class="image-preview"></div>
-
-        <button type="button" onclick="init()">Start</button>
-        <div id="webcam-container"></div>
+        <label for="img">Upload Image</label>
+        <input type="file" id="img" name="img">
+        <div class="image-preview">
+            <img id="image-preview" width="200" />
+        </div>
+        <button type="button" onclick="init()">Identify</button>
         <div id="label-container"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
